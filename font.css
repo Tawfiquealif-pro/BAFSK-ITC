@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
+
+:root{
+    --anek_bangla:'AnekBangla';
+    --font_path:'./fonts/Anek Bangla Multiweight (Mobile & PC)/Normal/Anek Bangla Bold.ttf';
+    --anek_bangla_bold:'Anek Bangla Bold.ttf';
+    --anek_bangla_extrabold:'Anek Bangla ExtraBold.ttf';
+    --anek_bangla_extralight:'Anek Bangla ExtraLight.ttf';
+    --anek_bangla_light:'Anek Bangla Light.ttf';
+    --anek_bangla_medium:'Anek Bangla Medium.ttf';
+    --anek_bangla_regular:'Anek Bangla Regular.ttf';
+    --anek_bangla_semibold:'Anek Bangla SemiBold.ttf';
+    --anek_bangla_thin:'Anek Bangla Thin.ttf';
+}
+.hind-siliguri-light {
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.hind-siliguri-regular {
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hind-siliguri-medium {
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.hind-siliguri-semibold {
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.hind-siliguri-bold {
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+/**tiktok sans*/
+
+.tiktok-sans-light {
+  font-family: "TikTok Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100;
+}
+.tiktok-sans-regular {
+  font-family: "TikTok Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100;
+}
+.tiktok-sans-medium {
+  font-family: "TikTok Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100;
+}
+
+.tiktok-sans-semibold {
+  font-family: "TikTok Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100;
+}
+
+.tiktok-sans-bold {
+  font-family: "TikTok Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 100;
+}
