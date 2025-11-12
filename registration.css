@@ -1,0 +1,391 @@
+
+:root{
+    --base-blue: #0368D9;
+    --base-white: #ffffff;
+    --deep-blue: #1C3385;
+    --icon-blue: #025BA1;
+    --minimal-grey:#E3E3E3;
+    --global-margin: 20px;
+    --heading-font-size: 14px;
+    --detail-font-size:12px;
+}
+
+
+/* Overlay background */
+.overlay {
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+.hidden { display: none; }
+.add_position {  position: fixed;}
+
+/* Spinner circle */
+.spinner {
+  border: 4px solid rgba(255,255,255,0.2);
+  border-top: 4px solid #00ff88;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.muted_text{
+    color: rgba(0, 0, 0, 0.317);
+}
+
+
+/* Success / error colors */
+.success {
+  color: #00ff88;
+}
+.error {
+  color: #ff5555;
+}
+
+.detail_view{
+    width: 700px;
+    height: auto;
+    background-color: white;
+}
+
+.align_center{
+    display: flex;
+    justify-content: center;
+}
+
+.logo_small_view{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    font-size: 30px;
+}
+
+.fa-xmark{
+    color: var(--base-blue);
+    cursor: pointer;
+}
+
+.placeholder_button{
+    background-color: #00000000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s ease-in-out;
+}
+
+.placeholder_button:hover{
+    background-color: #00000015;
+}
+
+.alldetail{
+    text-align: center;
+}
+
+.alldetail .dial_box{
+    background-color: #00000000;
+    width: auto;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1.4px solid #d2d2d2;
+}
+
+.placeholders{
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 3px;
+}
+
+.input_value{
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+.alldetail h3{
+    text-align: center;
+    font-weight: 200;
+    margin: 10px;
+    font-size: 15px;
+}
+/**********************/
+.alldetail button{
+    margin-bottom: 20px;
+}
+
+.status_message {
+    text-align: center;
+    margin: 30px;
+}
+
+.status_message p{
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.status_message a{
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.sign_holder{
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+}
+/******************AAA**************/
+.success_msg .sign_holder{
+        border: 6px solid #61ba61;
+}
+
+.error_msg .sign_holder{
+        border: 6px solid var(--base-blue);
+}
+
+
+.status_message .fa-check{
+    margin-top: 10px;
+    font-size: 90px;
+    color: #61ba61;
+}
+
+.status_message .fa-xmark{
+    margin-top: 8px;
+    font-size: 90px;
+    color: #bd282b;
+}
+
+.status_message a{
+    color: var(--base-blue);
+    text-decoration: underline;
+}
+
+        /* --- Main Content / Form Styling --- */
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .main-heading {
+            font-size: 1.9em;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .sub-heading {
+            font-size: 1.5em;
+            color: #777;
+            margin-bottom: 40px;
+        }
+
+        .registration-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /*Input style*/
+.input-container {
+    position: relative; /* Essential for positioning the label */
+    margin-bottom: 25px;
+    width: 100%; /* Example width */
+}
+
+.input-container select{
+    width: 100%;
+    padding: 20px 12px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 20px 12px; /* Added horizontal padding for better spacing with rounded corners */
+    border: 2px solid #000000; /* Full border instead of just bottom */
+    border-radius: 4px; /* Rounded corners! */
+    outline: none; /* Remove the default focus outline */
+    font-size: 16px;
+    transition: border-color 0.2s ease-out; /* Smooth transition for border color */
+}
+
+/* The label's initial position (as the placeholder) */
+.input-container label {
+    letter-spacing: -0.5px;
+    position: absolute;
+    top: 10px; /* Initial vertical position */
+    left: 10px; /* Adjusted left position to align with padding */
+    color: #80868b;
+    font-size: 13px;
+    pointer-events: none; /* Allows clicks to pass through to the input */
+    transition: all 0.2s ease-out; /* Smooth animation for movement and size */
+    background-color: white; /* Added to cover the border when label floats up */
+    padding: 0 4px; /* Small padding for the background to slightly overlap the border */
+}
+
+/* The 'Floating' state:
+   Triggered when the input is focused OR when it has content (:valid)
+*/
+.input-container input:focus + label,
+.input-container input:valid + label {
+    top: -10px; /* Move up, adjusted for padding/border */
+    left: 8px; /* Adjusted left position to center background with border */
+    font-size: 12px; /* Shrink the text */
+    color: var(--base-blue); /* Change color when focused (Google blue) */
+}
+
+/* Change border color when focused */
+.input-container input:focus {
+    border-color: var(--base-blue); /* Change to Google blue on focus */
+    border-width: 2px; /* Make border slightly thicker on focus */
+    padding: 9px 11px; /* Adjust padding to compensate for thicker border and maintain alignment */
+}
+        /* Checkbox Styling */
+        .checkbox-group {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding: 0 5px;
+            font-size: 0.9em;
+            text-align: left;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            flex-shrink: 0;
+            margin-right: 10px;
+            margin-top: 2px;
+            accent-color: var(--base-blue);
+        }
+
+        /* Payment Instruction Styling */
+        .payment-instruction {
+            font-weight: 200;
+            text-align: left;
+            width: 100%;
+            margin-top: 20px;
+            padding: 0 5px;
+        }
+
+        .payment-instruction h3 {
+            text-align: center;
+            font-size: 2em;
+            font-weight: 500;
+            margin: 20px 0 15px 0;
+        }
+
+        .payment-instruction p {
+            margin-bottom: 15px;
+            line-height: 1.4;
+            font-size: 0.9em;
+        }
+
+        .phone-number-highlight {
+            color: var(--base-blue);
+            font-weight: bold;
+        }
+
+        .payment-instruction a {
+            color: var(--base-blue);
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .payment-info-heading {
+            font-size: 1.2em;
+            font-weight: 500;
+            text-align: left;
+            width: 100%;
+            margin: 30px 0 20px 0;
+            padding: 0 5px;
+        }
+
+        .how-to-pay-link {
+            font-weight: 100;
+            align-self: flex-start;
+            color: var(--base-blue);
+            text-decoration: underline;
+            margin-top: -10px;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+        }
+
+        /* Register Button */
+        .register-btn {
+            background-color: var(--base-blue);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.1em;
+            cursor: pointer;
+            border-radius: 3px;
+            width: 100%;
+            max-width: 250px;
+            margin-top: 10px;
+        }
+
+        /* --- Footer Styling --- */
+
+
+        /* =================================================== */
+        /* MEDIA QUERY FOR SMALL SCREENS (Phones/Tablets)      */
+        /* =================================================== */
+        @media (max-width: 768px) {
+   
+
+            /* Further refine the form container on small screens */
+            .form-container {
+                padding: 15px;
+                margin: 30px auto;
+            }
+
+            .main-heading {
+                font-size: 1.6em;
+            }
+
+            .sub-heading {
+                font-size: 0.9em;
+                margin-bottom: 25px;
+            }
+            
+            .checkbox-group {
+                font-size: 0.85em;
+                padding: 0;
+            }
+            
+            .payment-instruction p,
+            .payment-info-heading,
+            .how-to-pay-link {
+                font-size: 0.85em;
+            }
+            .input-container input{
+                width: 90%;
+            }
+
+            .detail_view{
+                width: 90%;
+            }
+        }
+

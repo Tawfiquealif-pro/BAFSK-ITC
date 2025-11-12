@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITC</title>
+    <link rel="stylesheet" href="../font.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../registration.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=language" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+<style>
+    a{
+        color: #8b8b8b ;
+    }
+    ul{
+        margin: 5px 0;
+    }
+    li{
+        list-style: none;
+    }
+    .paragraph{
+        font-family: 'TikTok Sans';
+        font-size: 14px;
+    }
+    .event_content{
+        max-width: 1100px;
+        width: 80%;
+        margin: 100px auto;
+    }
+    .source_page{
+        color: #8b8b8b;
+        font-size: 12px;
+        font-weight: 200px;
+    }
+    .event_banner{
+        text-align: center;
+        margin-top: 10px;
+        color: #8b8b8b;
+    }
+    .event_title{
+        margin: 20px 0;
+    }
+    .event_title h3{
+        font-size: 12px;
+        color: #8b8b8b;
+    }
+    .event_banner img{
+        width: 100%;
+    }
+    @media (max-width: 768px) {
+        .event_banner{
+            width: 100%;
+        }
+        .event_content{
+            margin: 10px auto;
+            width: 94%;
+        }
+    }
+</style>
+</head>
+<body class="tiktok-sans-semibold">
+
+    
+<!-- Loading Spinner and Message Overlay add_position -->
+<div id="overlay" class="overlay hidden remove_position align_center">
+
+  <div class="detail_view hidden " id="detail_view">
+        <div class="logo_small_view">
+            <img src="../images/Asset 7bafsk_ITC_webpage.png" alt="" width="100">
+            <div class="placeholder_button">
+                <i class="fa-solid fa-xmark" onclick="crossButton()"></i>
+            </div> 
+        </div>
+        <div class="alldetail" id="alldetail">
+            <div class="dial_box">
+                <p class="placeholders">NAME</p>
+                <p class="input_value">Tawfique Alif</p>
+            </div>
+            <div class="dial_box">
+                <p class="placeholders">ROLL</p>
+                <p class="input_value">209438</p>
+            </div>
+            <div class="dial_box">
+                <p class="placeholders">ID</p>
+                <p class="input_value">01974113900</p>
+            </div>
+            <div class="dial_box">
+                <p class="placeholders">EMAIL</p>
+                <p class="input_value">alif@gmail.com</p>
+            </div>
+            <div class="dial_box">
+                <p class="placeholders">CONTACT</p>
+                <p class="input_value">01832645554</p>
+            </div>
+            <h3>
+                If you think your information are correct the procceed to pay. otherwise fix any kind of typo error
+            </h3>
+            <button class="register-btn muted_bg" onclick="formSubmition()">
+                <p id="starting_text">Procceed to pay</p> 
+                <div class="animated hidden" id="animated">
+                        <div class="animated_dot"></div>
+                        <div class="animated_dot"></div>
+                        <div class="animated_dot"></div>
+                        <div class="animated_dot"></div>
+                        <div class="animated_dot"></div>
+                </div>
+            </button>
+        </div>
+        <div class="status_message hidden success_msg" id="success_msg">
+            <div class="sign_holder" >
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <p>Congratulations We have recived your request and will let you know soon. till then keep eye in your email/contact number</p>
+            <a href="">Back to home</a>
+        </div>
+
+        <div class="status_message hidden error_msg" id="error_msg">
+            <div class="sign_holder">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <p>Sorry there was something wrong. try again!</p>
+            <a href="">Back to home</a>
+        </div>
+  </div>
+</div>
+
+    <nav>
+        <div class="global_nav_bar">
+            <div class="logo"><img src="../images/Asset 1bafsk_ITC_webpage.png" alt="ERR img not found" width="100px"></div>
+            <ul class="tiktok-sans-bold" style="font-family: TikTok sans;" >
+                <li><a href="event.html">EVENTS</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">MEMBERS</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">ACHIVEMENTS</a></li>
+            </ul>
+        </div>
+        <div class="related_info tiktok-sans-bold">
+            <ul class="tiktok-sans-semibold">
+                <li><a href="">Service Guide</a></li>
+                <li><a href="registration.html">How to Get Involve</a> </li>
+            </ul>
+            <div class="language_drpdn">
+                <a href="registration.html">JOIN</a> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+            <div class="search">
+            <i class="fas fa-bars hamburger-menu" id="hamburger_btn"></i>
+
+            </div>
+        </div>
+    </nav>
+    <div class="sub_div">
+        <div class="sub_nav tiktok-sans-semibold">
+            <div class="left">
+                <ul>
+                    <li><a href="">MERCHANDISE</a></li>
+                    <li><a href="">DOWNLOAD FORM</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <p class="fa-solid fa-magnifying-glass"></p>
+            </div>
+        </div>
+    </div>
+    <div class="mobile_nav" id="mobile_menu">
+        <span class="tiktok-sans-bold " >
+                <li><a href="#" class="no_underline">EVENTS</a></li>
+                <li><a href="#" class="no_underline">ABOUT</a></li>
+                <li><a href="#" class="no_underline">MEMBERS</a></li>
+                <li><a href="#" class="no_underline">CONTACT</a></li>
+                <li><a href="#" class="no_underline">ACHIVEMENTS</a></li>
+                <li><a href="#" class="tiktok-sans-semibold small_text">Service Guide</a></li>
+                <li><a href="#" class="tiktok-sans-semibold small_text">How to Get Involve</a> </li>
+        </span>
+    </div>
+
+<div class="event_content" >
+<div class="source_page tiktok-sans-light" >
+    <p>Home/event</p>
+</div>
+    <div class="event_banner" >
+        <img src="../images/Artboard 1bafsk_ITC_webpage.jpg" alt="" >
+    </div>
+    <div class="eventdescription">
+        <div class="event_title">
+            <h1 class="tiktok-sans-bold" >The recommended Facebook banner</h1>
+            <h3 class="tiktok-sans-light">By <i><a href="">@Tawfique Alif</a></i> | 12th, june 25</h3>
+        </div>
+        <p>
+           <p class="paragraph tiktok-sans-light">The recommended Facebook banner (cover photo) size is 820 x 360 pixels, designed with a "safe zone" in the center to work on both desktop and mobile devices. On a desktop, the banner displays at 820 x 312 pixels, while on a mobile device, it shows at 640 x 360 pixels. Keeping important text and logos within the central 820 x 360 pixel area prevents them from being cropped by the profile picture on the left or by the different display dimensions across devices. 
+            Dimensions and best practices</p> 
+            <ul class="paragraph">
+            <li>Recommended size: 820 x 360 pixels.</li>
+            <li>Desktop display: 820 x 312 pixels.</li>
+            <li>Mobile display: 640 x 360 pixels.</li>
+            </ul>
+           <p class="paragraph tiktok-sans-light">[NOTE] Place all critical information (like text and logos) in the central 820 x 360 pixel area to ensure it is visible on all devices.
+            Profile picture: Be mindful that your profile picture will cover the bottom-left portion of the cover photo on both desktop and mobile, so avoid placing important elements there.
+            File format: Upload as a JPG or PNG file, keeping the file size under 100 KB for faster loading.
+            Event cover photos: Use the recommended dimensions of 1920 x 1005 pixels for Facebook events. </p> 
+        </p>
+    </div>
+</div>
+
+    <!-- Main Content / Form Section -->
+    <main class="form-container tiktok-sans-semibold">
+        <h2 class="main-heading" style="text-align: left;">EVENT PARTICIPATION FORM</h2>
+
+        <form class="registration-form" id="registration-form" method="POST">
+
+            <!-- Information Fields -->
+    <div class="input-container">
+    <input class="user_input" type="text" id="name" name="name" required>
+    <label for="username">NAME</label>
+    </div>
+    <div class="input-container">
+    <input class="user_input" type="text" id="roll" name="roll" required>
+    <label for="username">ROLL</label>
+    </div>
+    <div class="input-container">
+    <input class="user_input" type="text" id="id_card" name="id_card" required>
+    <label for="username">ID (ID CARD)</label>
+    </div>
+    <div class="input-container">
+    <input class="user_input" type="text" id="email" name="email" required>
+    <label for="username">EMAIL</label>
+    </div>
+    <div class="input-container">
+    <input class="user_input" type="text" id="phone" name="phone" required>
+    <label for="username">PHONE</label>
+    </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree with the terms and condition of this event and submit my verified details through this portal</label>
+            </div>
+
+            <!-- Payment Instruction Section -->
+            <div class="payment-instruction">
+                <h3>Instruction for payment</h3>
+                <p>Select your desired payment method. Currently we only accept <b>Bkash, Nagad, Rocket, Tap-pay, Cash</b></p>
+                <p>Send <b>100 tk</b> at this number <span class="phone-number-highlight">+88 0194928476</span></p>
+                <p>Paste your <b>Trnx Id</b> and mobile <b>Number</b> below, once we receive your payment confirmation we would let you know through your given email</p>
+                <p>For any inconvenience call our media manager. <a href="#">Click here</a> for detail information</p>
+            </div>
+
+            <h4 class="payment-info-heading">Payment info</h4>
+
+            <!-- Payment Fields -->
+    <div class="input-container">
+    <input type="text" id="payment_phone_number"  name="payment_phone_number" required>
+    <label for="username">PAYMENT PHONE NUMBER</label>
+    </div>
+    <div class="input-container">
+    <input type="text" id="transactionid" name="transactionid" required>
+    <label for="username">TRANSACTION ID</label>
+    </div>
+    <div class="input-container">
+    <select name="payment_method" id="payment_method" required>
+        <option value="0">PAYMENT METHOD</option>
+        <option value="bkash">Bkash</option>
+        <option value="nagad">Nagad</option>
+    </select>
+    </div>
+            <a href="#" class="how-to-pay-link">How to pay?</a>
+
+            <button type="submit" class="register-btn">REGISTER</button>
+
+        </form>
+    </main>
+
+ <!----------------------------FOOTER---------------------------->
+ <footer class="bafsk-footer">
+        <div class="footer-content">
+            
+            <div class="footer-logo">
+                <img src="../images/Asset 1bafsk_ITC_webpage.png" alt="" width="150">
+            </div>
+            
+            <ul class="footer-list">
+                <li><a href="#">Social media</a></li>
+                <li><a href="#">Groups</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Official announcements</a></li>
+                <li><a href="#">Activities</a></li>
+                <li><a href="#">Events</a></li>
+            </ul>
+
+            <ul class="footer-list hidden-on-mobile">
+                <li><a href="#">Social media</a></li>
+                <li><a href="#">Groups</a></li>
+                <li><a href="#">Pages</a></li>
+            </ul>
+            
+            <div class="footer-developer">
+                <h3 class="developer-title">About Developer</h3>
+                <p class="developer-text">
+                    Hi there I'm Tawfique Alif! Brought to the world, every tall and small and all.
+                    Many lives of color variety, together, we keep living.
+                    With everyone, we people and all the plants, every bird and flower.
+                    Shoulder to shoulder just look around!
+                    But in the world, things we're always reaching for.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>
+                All right reserved by cpy right law, developed by <b>Tawfique Alif</b>. Published and maintained.<br>
+                BAFSK authority
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerBtn = document.getElementById('hamburger_btn');
+            const mobileMenu = document.getElementById('mobile_menu');
+
+            // Function to toggle the menu open/closed
+            hamburgerBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('open');
+            });
+            
+            // Optional: Close menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                });
+            });
+        });
+    </script>
+
+    
+
+</body>
+</html>
