@@ -240,7 +240,7 @@ nav{
 }
 
 .banner{
-    background: url('images/829ea41e8cb512e6b04d666edc666eb6.jpg') no-repeat;
+    background: url('../images/829ea41e8cb512e6b04d666edc666eb6.jpg') no-repeat;
     position: relative;
     height: 600px;
     background-size: cover;
@@ -337,7 +337,7 @@ nav{
     border: 1px solid #c2c2c2;
     overflow: hidden;
     width: 250px;
-    height: 350px;
+    height: 370px;
     position: relative;
 }
 
@@ -346,7 +346,7 @@ nav{
 }
 
 .event_container .detail_tab h1{
-    margin: 10px 0 10px 0;
+    margin: 3px 0 3px 0;
     font-size: var(--heading-font-size);
 }
 
@@ -364,7 +364,8 @@ nav{
     color: var(--base-blue);
     font-size: 14px;
     position: absolute;
-    bottom: 0;
+    text-decoration: none;
+    bottom: 35%;
 }
 
 .info-section h2 {
@@ -731,6 +732,7 @@ nav{
     }
     .event_container{
         width: 300px;
+        height: 450px;
     }
     .page-container .header{
         margin: 20px 10px;
