@@ -40,7 +40,7 @@ nav{
 .mobile_nav {
     display: none; /* Default hidden state */
     position: absolute;
-    top: 112px; /* Position right below the header */
+    top: 103px; /* Position right below the header */
     left: 0;
     width: 100%;
     background-color: var(--base-blue);
@@ -240,7 +240,7 @@ nav{
 }
 
 .banner{
-    background: url('../images/829ea41e8cb512e6b04d666edc666eb6.jpg') no-repeat;
+    background: url('../images/Artboard\ 4bafsk_ITC_webpage_BANNER.jpg') no-repeat;
     position: relative;
     height: 600px;
     background-size: cover;
@@ -752,5 +752,13 @@ nav{
     }
     .rep{
         text-align: center;
+    }
+    .banner{
+        background: url('../images/Artboard\ 1bafsk_ITC_webpage_BANNER_MOBILE.jpg') no-repeat;
+        position: relative;
+        height: 600px;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
     }
 }
